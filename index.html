@@ -1,26 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>JavaScript</title>
 </head>
-<body style="background-color: rgb(192, 192, 190) ;">
-    <h1 class="titulo">JavaScript</h1>
-    <div>
-        <h3 class="pregunta">¿Que es un algoritmo en JavaScript?</h3>
-        <p class="respuesta">-Un algoritmo son una serie de pasos/instrucciones que forman un proceso, es decir, Es un conjunto prescrito de instrucciones o reglas bien definidas, ordenadas y finitas que permite llevar a cabo una actividad mediante pasos sucesivos que no generen dudas a quien deba hacer dicha actividad. Lo algoritmos emplear bucles e instrucciones condicionales.</p>
-        <h3 class="pregunta">¿Que es un bucle o ciclo?</h3>
-        <p class="respuesta">-Los bucles o ciclos son estructuras que nos permiten repetir un conjunto de instrucciones una cantidad determinada de veces.Estos funcionan hasta que cierta condicion evaluada sea falsa. Existen 3 tipos de bucles: Por conteo (<span class="span">FOR</span>) y condicionales (<span class ="span"> WHILE</span> ,<span class="span"> DO</span>) 
-        </p>
-    </div>
+
+<body >
+    <!----- Header ------>
+    <header >
+        <nav class="navbar navbar-expand-lg bg-white " style="box-shadow: 2px 2px 5px gray;">
+            <div class="container-fluid">
+                <a class="navbar-brand dropGlassIcono" style="color:rgb(61,210,227); " href="#">LEVEL UP </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active " style="font-weight: bold ;" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-weight: bold ;"href="#">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-weight: bold ;" href="#">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-weight: bold ;" href="#">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dropGlassTitulo">
+            <h2 class="levelUp">LEVEL UP</h2> 
+            <h2 class="store">STORE</h2>
+        </div>
+    </header>
+    <!----- Main ------>
+    <main >
+        <section class="text1">
+            <h1 class="titulo">JavaScript</h1>
+            <div>
+                <h3 class="pregunta">¿Que es un algoritmo en JavaScript?</h3>
+                <p class="respuesta">-Un algoritmo son una serie de pasos/instrucciones que forman un proceso, es decir, Es un conjunto prescrito de instrucciones o reglas bien definidas, ordenadas y finitas que permite llevar a cabo una actividad mediante pasos sucesivos que no generen dudas a quien deba hacer dicha actividad. Lo algoritmos emplear bucles e instrucciones condicionales.</p>
+                <h3 class="pregunta">¿Que es un bucle o ciclo?</h3>
+                <p class="respuesta">-Los bucles o ciclos son estructuras que nos permiten repetir un conjunto de instrucciones una cantidad determinada de veces.Estos funcionan hasta que cierta condicion evaluada sea falsa. Existen 3 tipos de bucles: Por conteo (<span class="span">FOR</span>) y condicionales (<span class="span"> WHILE</span> ,<span class="span"> DO</span>) 
+                </p>
+            </div>
+        </section>
 
 
 
 
-    
+    </main>
+    <!----- Aside ------>
+    <!-- <aside style="background-color: #f4e9cd ;">
+        <h2 class="aside">Aside</h2>
+
+
+
+
+    </aside> -->
+    <!----- Footer ------>
+    <footer class="text-white" style="background-color: rgb(34,34,34) ;">
+        <div class="container">
+            <nav class="row">
+                <!-- logo -->
+                <a href="#" class="col-4 text-reset text-uppercase-d-flex-aligitems-center ">
+                    <img src="" alt="" class="img-logo mr-2"> Drops Glass
+                </a>
+                <!-- menu -->
+                <ul class="col-5 list-unstyled">
+                    <li class="font-wight-bold text-uppercase redesSecciones " style="color: rgb(61,210,227)"> Secciones </li>
+                    <li class="linkFooter"><a href="#" class="text-reset"> Home </a></li>
+                    <li class="linkFooter"><a href="#" class="text-reset"> Tienda </a></li>
+                    <li class="linkFooter" ><a href="#" class="text-reset"> Sobre Nosotros </a></li>
+                </ul>
+                <!-- redes -->
+                <ul class="col-3 list-unstyled">
+                    <li class="font-wight-bold text-uppercase redesSecciones" style="color: rgb(61,210,227)"> REDES </li>
+                    <li class="d-flex justify-content-between mt-3 linkFooter">
+                        <a href="#" class="text-reset">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-reset">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-reset">
+                            <i class="fa-brands fa-whatsapp"></i> 
+                        </a>
+                        <a href="#" class="text-reset">
+                            <i class="fa-brands fa-facebook"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+
+
+
+    </footer>
+
+    <!----- Links JS ------>
+            <!-- boostrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+            <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0f296a15f9.js" crossorigin="anonymous"></script>
+            <!-- JavaScritp -->
     <script src="./pages/archivo.js"></script>
 </body>
+
 </html>

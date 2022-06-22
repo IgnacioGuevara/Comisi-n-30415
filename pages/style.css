@@ -3,30 +3,54 @@
     margin: 0;
     padding: 0;
 }
+/* paletas */
+/* white: rgb(247,247,247) cyan: rgb(61,210,227) violeta: rgb(109, 0, 119) */
+
+
+/* -------HOME----------- */
+.dropGlassIcono{
+    text-shadow: 2px 2px 1px rgb(109, 0, 119);
+}
+.dropGlassTitulo{
+    margin:0;
+    padding: 30px;
+    background-color: rgb(247,247,247);
+}
+.levelUp{
+    color: rgb(61,210,227);
+    text-align: right;
+    text-shadow: rgb(61,210,227) 2px 3px 5px;
+    font-size: 50px;
+}
+.store{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: gray;
+}
 .titulo{
-    margin: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(248, 248, 28);
-    text-shadow: 5px 2px 10px black;
-    border-radius: 10px;
-    
+    text-align: center;
+    color:rgb(61,210,227) ;
+    text-shadow: gray 2px 2px 5px;
+    margin-top: 20px;
+    margin-bottom:5px ;
 }
 .pregunta{
-    font-size: 20px;
-    margin: 15px;
-    display: flex;
-    display: inline-block;
-    border: 2px solid  darkgray;
-    border-radius: 10%;
-
+    margin: 10px 0 5px 10px ;
 }
 .respuesta{
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 20px;
+    margin: 10px 0 5px 2px ;
 }
-.span{
-    color: red;
+.redesSecciones{
+    text-shadow: 2px 2px 2px black;
+}
+.linkFooter{
+    color: rgb(247,247,247);
+    list-style: none;
+}
+
+.text1{
+    margin-bottom: 20px;
 }
