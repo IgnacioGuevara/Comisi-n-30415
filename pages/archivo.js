@@ -1,129 +1,66 @@
+/* ----NOMBRE---- */
 function nombreCompleto() {
     let nombre = prompt ("Ingrese su nombre completo.");
         alert ("Bienvenido " + nombre + " !!");
 }
-function generoRopa() {
-    let genero = prompt("¿Qué genero de prenda está buscando?");
-        switch (genero) {
-            case  "masculino":
-                alert("masculino")
-                break;
-            case 2 || "femenino":
-                alert("femenino")
-                break;
-            case 3 || "niño/a":
-                alert("niño")
-                break;
-            case 4 || "unisex":
-                alert("unisex")
-                break;
+/* ----PRECIO---- */
+function precio() {
+    let presupuesto = prompt("Ingrese el valor que esta dispuesto a pagar por un producto. \n - $0 USD \n - $1 USD a $10 USD \n - $11 USD a $50 \n - $50 USD a $100 USD" )
+    if (presupuesto == 0) {
         
-            default:
-                alert("sada")
-                break;
-        }
-    }
-
-
-function tipoPrenda() {
-    let prenda = prompt("¿Qué tipo de prenda esta buscando? ");
-        switch (prenda) {
-            case 1 || "pantalon":
-                alert("pantalon")
-                break;
-            case 2 || "remera":
-                alert("remera")
-                break;
-            case 3 || "medias":
-                alert("media")
-                break;
-            case 4 || "buzo" || "campera":
-                alert("buzo")
-                break;
-        
-            default:
-                break;
-        }
-        
-    }
-
-
-function talle() {
-    let talle = prompt ("¿Qué talle está buscando?")
-        switch (talle) {
-            case 1 || "s" :
-                alert("s")
-                break;
-            case 2 || "m" :
-                alert("m")
-                break;
-            case 3 || "l":
-                alert("l")
-                break;
-            case 4 || "xl" :
-                alert("xl")
-                break;
-        
-            default:
-                break;
-        }
-    }
-
-/*     nombreCompleto(); */
-    generoRopa();
-    tipoPrenda();
-    talle();
-
-
-/* 
-
-
-
-
-function carnetConducir() {
-    let Registro = prompt("¿Tiene licencia de conducir? ");
-    switch(Registro ){
-        case "si":
-        alert("Puede conducir.");
-        break;
-        case "no":
-            let email = prompt("¿Desea rendir el examen para obterner su licencia de conducir? ");
-            if (email == "si") {
-                prompt("Ingrese su correo electronico para contactanos con usted. ");
-                alert("Gracias por confiar en nosotros, dentro de las 48hs habiles nos contactaremos con usted");
-                
-            } else if (email =="no") {
-                alert("La accion ha sido finalizada.");
-                
-            }else{
-                alert("no ha respondido la pregunta correctamente, el sistema se ha bloqueado");
-                
-            }
-        break;
-        default:
-            alert("no ha respondido la pregunta correctamente, el sistema se ha bloqueado");
-        break;
+    } else if (presupuesto >= 1 && presupuesto <= 10 ){
+        alert("los filtros se han actualizado.")
+    } else if (presupuesto >= 11 && presupuesto <= 50 ){
+        alert("los filtros se han actualizado.")
+    } else if (presupuesto >= 51 && presupuesto <= 100 ){
+        alert("los filtros se han actualizado.")
+    }else {
+        alert ("No ha ingresado ningun dato solicitado.")
     }
 }
-
-
-
-function edad() {
+/* ----EDAD---- */
+function edadYgenero() {
     let años = parseFloat(prompt("Ingrese su edad"));
-    if (años >= 18) {
-        carnetConducir();
+    if (años >= 13) {
+        registroGenero();
     
-    } else if (años < 18) {
-        alert("No tiene la edad unficiente para conducir.");
+    } else if (años < 13) {
+        alert("Debe ser mayor de 13 años para poder ingresar al sitio web.");
 
     } else {
         alert("Debe que ingresar un valor numerico");
     }
 }
-
-
+/* ----GENERO---- */
+function registroGenero() {
+    let Registro = prompt("¿Que genero esta buscando? \n - gratuitos \n - nuevos lanzamientos \n - deportivos \n - accion \n - proximamentes ");
+    switch(Registro){
+        case "gratis":
+            alert("ha ingresado a la seccion de: Juegos Gratuitos. ");
+            precio();
+        break;
+        case "Nuevos lanzamientos":
+            alert("ha ingresado a la seccion de: Nuevos lanzamientos. ");
+            precio();
+        break;
+        case "deporte":
+            alert("ha ingresado a la seccion de: Juegos Deportivos. ");
+            precio();
+        break;
+        case "accion":
+            alert("ha ingresado a la seccion de: Juegos De Accion. ");
+            precio();
+        break;
+        case "proximamente":
+            alert("ha ingresado a la seccion de: Proximamente. ");
+            precio();
+        break;
+        default:
+            alert("no ha ingresado ningun valor")
+        break;
+    }
+}
 
 
 nombreCompleto();
-edad();
- */
+edadYgenero();

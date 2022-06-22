@@ -8,10 +8,11 @@
 
 
 /* -------HOME----------- */
-.dropGlassIcono{
+    /* ---- header ---- */
+.levelUpIcono{
     text-shadow: 2px 2px 1px rgb(109, 0, 119);
 }
-.dropGlassTitulo{
+.levelUpTituloTitulo{
     margin:0;
     padding: 30px;
     background-color: rgb(247,247,247);
@@ -30,6 +31,8 @@
     margin-right: 10px;
     color: gray;
 }
+
+    /*---- main ---- */
 .titulo{
     text-align: center;
     color:rgb(61,210,227) ;
@@ -39,18 +42,20 @@
 }
 .pregunta{
     margin: 10px 0 5px 10px ;
+    color: gray;
 }
 .respuesta{
-    margin: 10px 0 5px 2px ;
+    margin: 10px 0 20px 30px ;
 }
+.text1{
+    margin-bottom: 0;
+    padding: 0;
+}
+    /* ---- footer ----*/
 .redesSecciones{
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 4px gray;
 }
 .linkFooter{
     color: rgb(247,247,247);
     list-style: none;
-}
-
-.text1{
-    margin-bottom: 20px;
 }
