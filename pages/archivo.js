@@ -4,7 +4,7 @@ function nombreCompleto() {
         alert ("Bienvenido " + nombre + " !!");
 }
 /* ----PRECIO---- */
-function precio() {
+/* function precio() {
     let presupuesto = prompt("Ingrese el valor que esta dispuesto a pagar por un producto. \n - $0 USD \n - $1 USD a $10 USD \n - $11 USD a $50 \n - $50 USD a $100 USD" )
     if (presupuesto == 0) {
         
@@ -17,7 +17,7 @@ function precio() {
     }else {
         alert ("No ha ingresado ningun dato solicitado.")
     }
-}
+} */
 /* ----EDAD---- */
 function edadYgenero() {
     let años = parseFloat(prompt("Ingrese su edad"));
@@ -33,18 +33,19 @@ function edadYgenero() {
 }
 /* ----GENERO---- */
 function registroGenero() {
-    let Registro = prompt("¿Que genero esta buscando? \n - gratis \n - nuevo lanzamiento \n - deporte \n - accion \n - proximamente ");
+    let Registro = prompt("¿Que genero esta buscando? \n - gratis \n - nuevo lanzamiento \n - deportes \n - accion \n - proximamente ");
     switch(Registro){
         case "gratis":
-            alert("ha ingresado a la seccion de: Juegos Gratuitos. ");
             precio();
+            alert("ha ingresado a la seccion de: juegos gratis. ");
+
         break;
         case "Nuevo lanzamiento":
-            alert("ha ingresado a la seccion de: Nuevos lanzamientos. ");
+            alert("ha ingresado a la seccion de: nuevos lanzamientos. ");
             precio();
         break;
         case "deporte":
-            alert("ha ingresado a la seccion de: Juegos Deportivos. ");
+            alert("ha ingresado a la seccion de: juegos deportivos. ");
             precio();
         break;
         case "accion":
@@ -52,7 +53,7 @@ function registroGenero() {
             precio();
         break;
         case "proximamente":
-            alert("ha ingresado a la seccion de: Proximamente. ");
+            (alert("ha ingresado a la seccion de: proximamente. "));
             precio();
         break;
         default:
@@ -63,7 +64,6 @@ function registroGenero() {
 
 nombreCompleto();
 edadYgenero(); 
-
 
 
 function Generos() {
@@ -92,12 +92,13 @@ const videoJuegos = [
     
 ];
 
-let categoria = prompt("ingresa la categoria \n - gratis \n - nuevo lanzamiento \n - deporte \n - accion \n - proximamente ");
-
+let categoria = prompt("ingresa la categoria \n - gratis \n - nuevo lanzamiento \n - deportes \n - accion \n - proximamente ");
 let filtradoCategoria = videoJuegos.filter(elemento => elemento.categoria === categoria);
 
 let nombre = prompt("Ingrese el nombre del juego");
 let filtradoNombre = filtradoCategoria.filter(elemento => elemento.nombre.includes(nombre));
+
 console.log(filtradoNombre);
+
 }
 
