@@ -32,7 +32,7 @@ function edadYgenero() {
 function Generos() {
 
 const videoJuegos = [
-    { nombre: "amoung Us", precio: 0  , categoria: "1" },
+    { nombre: "amoung Us", precio: 0  , categoria: "1", img: "" },
     { nombre: "fall Guys", precio: 0, categoria: "1" },
     { nombre: "pool", precio: 0, categoria: "1" },
     
