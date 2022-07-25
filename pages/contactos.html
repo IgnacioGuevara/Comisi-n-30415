@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../pages/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>JavaScript</title>
 </head>
 
-<body >
+<body>
     <!----- Header ------>
-    <header >
+    <header>
         <nav class="navbar navbar-expand-lg bg-white " style="box-shadow: 2px 2px 5px gray;">
             <div class="container-fluid">
                 <a class="navbar-brand levelUpIcono" style="color:rgb(61,210,227); " href="#">LEVEL UP </a>
@@ -24,7 +25,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active " style="font-weight: bold ;" aria-current="page" href="../index.html">Home</a>
+                            <a class="nav-link active " style="font-weight: bold ;" aria-current="page"
+                                href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-weight: bold ;" href="./Tienda.html">Tienda</a>
@@ -37,41 +39,42 @@
             </div>
         </nav>
         <div class="levelUpTitulo">
-            <h2 class="levelUp">LEVEL UP</h2> 
+            <h2 class="levelUp">LEVEL UP</h2>
             <h2 class="store">STORE</h2>
         </div>
 
     </header>
     <!----- Main ------>
     <main>
-        <div>
-            <h2 class=" contrataciones">Contacto</h2>
-            <form class="row g-3">
-                <div class="col-md-6 p-2">
-                    <h5 >Nombre</h5>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
-                </div>
-                <div class="col-md-6 p-2">
-                    <h5 >Apellido</h5>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
-                </div>
-                <div class="col-12 p-2">
-                    <h5 >Correo Electronico</h5>
-                    <input type="email" class="form-control" id="exampleInputEmail1" >
-                </div>
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input mt-2 " type="checkbox" id="gridCheck">
-                        <label class="form-check-label mt-1 mb-2 terminos" for="gridCheck">
-                            Acepta Terminos & Condiciones
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
-        </div>
+        <table class="table container">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <!----- Footer ------>
@@ -84,14 +87,16 @@
                 </a>
                 <!-- menu -->
                 <ul class="col-5 list-unstyled">
-                    <li class="font-wight-bold text-uppercase redesSecciones " style="color: rgb(61,210,227)"> Secciones </li>
+                    <li class="font-wight-bold text-uppercase redesSecciones " style="color: rgb(61,210,227)"> Secciones
+                    </li>
                     <li class="linkFooter"><a href="#" class="text-reset"> Home </a></li>
                     <li class="linkFooter"><a href="#" class="text-reset"> Tienda </a></li>
-                    <li class="linkFooter" ><a href="#" class="text-reset"> Sobre Nosotros </a></li>
+                    <li class="linkFooter"><a href="#" class="text-reset"> Sobre Nosotros </a></li>
                 </ul>
                 <!-- redes -->
                 <ul class="col-3 list-unstyled">
-                    <li class="font-wight-bold text-uppercase redesSecciones" style="color: rgb(61,210,227)"> REDES </li>
+                    <li class="font-wight-bold text-uppercase redesSecciones" style="color: rgb(61,210,227)"> REDES
+                    </li>
                     <li class="d-flex justify-content-between mt-3 linkFooter">
                         <a href="#" class="text-reset">
                             <i class="fa-brands fa-instagram"></i>
@@ -100,10 +105,10 @@
                             <i class="fa-brands fa-twitter"></i>
                         </a>
                         <a href="#" class="text-reset">
-                            <i class="fa-brands fa-whatsapp"></i> 
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
                         <a href="#" class="text-reset">
-                            <i class="fa-brands fa-facebook"></i> 
+                            <i class="fa-brands fa-facebook"></i>
                         </a>
                     </li>
                 </ul>
@@ -112,14 +117,18 @@
     </footer>
 
     <!----- Links ------>
-            <!-- boostrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-            <!-- font awesome -->
+    <!-- boostrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0f296a15f9.js" crossorigin="anonymous"></script>
-            <!-- JavaScritp -->
+    <!-- JavaScritp -->
     <script src="./pages/archivo"></script>
-            <!----- DOM ------>
+    <!----- DOM ------>
     <script src="./pages/indexDOM.js"></script>
 </body>
 

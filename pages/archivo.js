@@ -1,5 +1,5 @@
 /* ----NOMBRE---- */
-function nombreCompleto() {
+/* function nombreCompleto() {
     let nombre = prompt("Ingrese su nombre completo.");
     if (nombre != "") {
         alert ("Bienvenido " + nombre + "!!"); 
@@ -10,11 +10,11 @@ function nombreCompleto() {
     }
 }
 
-nombreCompleto();
+nombreCompleto(); */
 
 
 /* ----EDAD---- */
-function edadYgenero() {
+/* function edadYgenero() {
     let años = parseFloat(prompt("Ingrese su edad"));
     if (años >= 13) {
         Generos();
@@ -25,11 +25,11 @@ function edadYgenero() {
     } else {
         alert("Debe que ingresar un valor numerico");
     }
-}
+} */
 
 
 /* ---- FILTRO ---- */
-function Generos() {
+/* function Generos() {
 
 const videoJuegos = [
     { nombre: "amoung Us", precio: 0  , categoria: "1", img: "" },
@@ -66,7 +66,7 @@ let  nombreJuego = prompt("Ingrese el nombre del juego");
 let filtradoNombre = filtradoCategoria.filter(elemento => elemento.nombre.includes(nombreJuego));
 
 alert(`El nombre del juego que ha ingresado es: ${nombreJuego} ` )
-}
+} */
 
 
 
