@@ -1,6 +1,8 @@
-    const verCarrito = document.getElementById("verCarrito");
-    const carrito = JSON.parse(localStorage.getItem("carrito"));
     const seccionProductos = document.getElementById("productos");
+
+    const carrito = []; 
+    const carritoStorage = JSON.parse (localStorage.getItem("carrito") || []); 
+
 
 
 
@@ -11,7 +13,7 @@ let videoJuegos = [
     
     { nombre: "fifa 22", precio: 50 , categoria: "2", img: "./img/fifa22.avif" },
     { nombre: "pes 2021", precio: 70 , categoria: "2", img: "./img/pes2021.jpg" },
-    { nombre: "wwe 22", precio: 3 , categoria: "2", img: "./img/wwe22.jpg" },
+    { nombre: "wwe 22", precio: 30 , categoria: "2", img: "./img/wwe22.jpg" },
     { nombre: "nhl 2K22", precio: 70 , categoria: "2", img: "./img/nhl2022.jpg" },
     
     { nombre: "uncharted 4", precio: 89 , categoria: "3", img: "./img/uncharted.jpg" },
@@ -25,6 +27,7 @@ let videoJuegos = [
     { nombre: "league of legends", precio: 8 , categoria: "5", img: "./img/LOL.jpg" },
 ];
 
+
 function crearTarjeta() {
     for (const producto of videoJuegos) {
         let card = document.createElement("div");
@@ -33,15 +36,26 @@ function crearTarjeta() {
                                 <div class =" card-body">
                                     <h3 class = "card-title">  ${producto.nombre}</h3>
                                     <p class = "card-text"> Precio: ${producto.precio} USD</p>
-                                    <button id="agregar${producto.categoria}" class="p-2 bg-success m-2 text-white borderCarrito"> Agregar <i class="fas-fa-shopping-cart"</i> </button>
+                                    <button id="${producto.categoria}" class="p-2 bg-success m-2 text-white borderCarrito">  Agregar al Carrito </button>
                                 </div>
-                            </div>`;
+                            </div 
+                            `;
         card.className = ("container")
         
         seccionProductos.append(card)
-    }
-}
+
+
+
+        let addCarrito = document.getElementById(`${producto.categoria}`);
+        addCarrito.addEventListener("click", () => {
+            carrito.push(producto)
+            console.log(addCarrito);
+        });
+    };
+};
 crearTarjeta();
+
+
 
     function cargarPoductos(videoJuegos) {
         container.innerHTML = "";
@@ -52,16 +66,11 @@ crearTarjeta();
                                         <div class =" card-body">
                                             <h3 class = "card-title">  ${producto.nombre}</h3>
                                             <p class = "card-text"> Precio: ${producto.precio} USD</p>
-                                            <button id="agregar${producto.categoria}" class="p-2 bg-success m-2 text-white borderCarrito"> Agregar <i class="fas-fa-shopping-cart"</i> </button>
+                                            <button id="${producto.categoria}" class="p-2 bg-success m-2 text-white borderCarrito"> Agregar <i class="fas-fa-shopping-cart"</i> </button>
                                         </div>
                                 </div>`
             container.append(item);
 
-/*             let addCarrito = document.getElementById(producto.categoria)
-            addCarrito.addEventListener("click", () => {
-                carrito.push(videoJuegos);
-                localStorage.setItem("carrito", JSON.stringify(carrito));
-            }) */
 
         };
     }
@@ -129,27 +138,6 @@ function descendente() {
     });
 }
 
-
-    verCarrito.addEventListener("click", () => {
-        seccionProductos.innerHTML = "";
-        for (const producto of carrito) {
-            let cardCarrito = document.createElement("div");
-            cardCarrito.innerHTML = `<div class=" card text-center col-lg-3 col-md-5 col-sm-5 m-4">
-                                        <img class = "card-img-top p-2 " src=${producto.img} alt="${producto.nombre}">
-                                        <div class =" card-body">
-                                            <h3 class = "card-title">  ${producto.nombre}</h3>
-                                            <p class = "card-text"> Precio: ${producto.precio} USD</p>
-                                            <button id="agregar${producto.categoria}" class="p-2 bg-success m-2 text-white borderCarrito"> Agregar <i class="fas-fa-shopping-cart"</i> </button>
-                                        </div>
-                                    </div>`
-            seccionProductos.append(cardCarrito);
-            };
-        
-    
-            
-            seccionProductos.innerHTML = "";
-            
-        });
 
 
 
