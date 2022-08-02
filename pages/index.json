@@ -1,0 +1,20 @@
+[
+    { "nombre": "amoung Us", "precio": 0 , "categoria": "1", "img": "./img/amoungUs.webp" , "id": 1 },
+    { "nombre": "fall Guys", "precio": 0 , "categoria": "1", "img": "./img/fallGuys.jpg", "id": 2 },
+    { "nombre": "pool", "precio": 0 , "categoria": "1", "img": "./img/pool.jpg", "id": 3 },
+    
+    { "nombre": "fifa 22", "precio": 50 , "categoria": "2", "img": "./img/fifa22.avif", "id": 4 },
+    { "nombre": "pes 2021", "precio": 70 , "categoria": "2", "img": "./img/pes2021.jpg", "id": 5 },
+    { "nombre": "wwe 22", "precio": 30 , "categoria": "2", "img": "./img/wwe22.jpg", "id": 6 },
+    { "nombre": "nhl 2K22", "precio": 70 , "categoria": "2", "img": "./img/nhl2022.jpg", "id": 7 },
+    
+    { "nombre": "uncharted 4", "precio": 89 , "categoria": "3", "img": "./img/uncharted.jpg", "id": 8 },
+    { "nombre": "tomb raider", "precio": 56 , "categoria": "3", "img": "./img/tombrarider.jpg" , "id" :9 },
+    
+    { "nombre": "call of duty", "precio": 98 , "categoria": "4", "img": "./img/callofduty.jpg", "id": 10 },
+    { "nombre": "counter strike", "precio": 25 , "categoria": "4", "img": "./img/counterstrike.jpg", "id": 11  },
+    { "nombre": "battlefield 2042", "precio": 93 , "categoria": "4", "img": "./img/battlefield.jpg", "id": 12 },
+    { "nombre": "god of war", "precio": 8 , "categoria": "4", "img": "./img/godOfWar.jpg", "id": 13 },
+
+    { "nombre": "league of legends", "precio": 8 , "categoria": "5", "img": "./img/LOL.jpg" , "id": 14 }
+]

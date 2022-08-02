@@ -77,3 +77,21 @@
 .alert{
     border-radius: 30px;
 }
+.listaTienda{
+    list-style:none;
+    font-size:12px;
+}
+.nombreTienda{
+    display: inline;
+    color: rgb(61,210,227);
+    border-bottom: 1px solid rgb(109, 0, 119);
+    border-radius: 20px;
+    padding: 2px;
+
+}
+.precioId{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 20px;
+}

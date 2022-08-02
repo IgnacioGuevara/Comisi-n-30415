@@ -1,44 +1,46 @@
     const seccionProductos = document.getElementById("productos");
 
     const carrito = []; 
-    const carritoStorage = JSON.parse (localStorage.getItem("carrito") || []); 
+    const carritoStorage = JSON.parse (localStorage.getItem("carrito")) || [];
 
 
 
 
 let videoJuegos = [
-    { nombre: "amoung Us", precio: 0 , categoria: "1", img: "./img/amoungUs.webp"  },
-    { nombre: "fall Guys", precio: 0 , categoria: "1", img: "./img/fallGuys.jpg" },
-    { nombre: "pool", precio: 0 , categoria: "1", img: "./img/pool.jpg" },
+    { nombre: "amoung Us", precio: 0 , categoria: "1", img: "./img/amoungUs.webp" , id: 1 },
+    { nombre: "fall Guys", precio: 0 , categoria: "1", img: "./img/fallGuys.jpg", id: 2 },
+    { nombre: "pool", precio: 0 , categoria: "1", img: "./img/pool.jpg", id: 3 },
     
-    { nombre: "fifa 22", precio: 50 , categoria: "2", img: "./img/fifa22.avif" },
-    { nombre: "pes 2021", precio: 70 , categoria: "2", img: "./img/pes2021.jpg" },
-    { nombre: "wwe 22", precio: 30 , categoria: "2", img: "./img/wwe22.jpg" },
-    { nombre: "nhl 2K22", precio: 70 , categoria: "2", img: "./img/nhl2022.jpg" },
+    { nombre: "fifa 22", precio: 50 , categoria: "2", img: "./img/fifa22.avif", id: 4 },
+    { nombre: "pes 2021", precio: 70 , categoria: "2", img: "./img/pes2021.jpg", id: 5 },
+    { nombre: "wwe 22", precio: 30 , categoria: "2", img: "./img/wwe22.jpg", id: 6 },
+    { nombre: "nhl 2K22", precio: 70 , categoria: "2", img: "./img/nhl2022.jpg", id: 7 },
     
-    { nombre: "uncharted 4", precio: 89 , categoria: "3", img: "./img/uncharted.jpg" },
-    { nombre: "tomb raider", precio: 56 , categoria: "3", img: "./img/tombraider.jpg" },
+    { nombre: "uncharted 4", precio: 89 , categoria: "3", img: "./img/uncharted.jpg", id: 8 },
+    { nombre: "tomb raider", precio: 56 , categoria: "3", img: "./img/tombraider.jpg" , id:9 },
     
-    { nombre: "call of duty", precio: 98 , categoria: "4", img: "./img/callofduty.jpg" },
-    { nombre: "counter strike", precio: 25 , categoria: "4", img: "./img/counterstrike.jpg" },
-    { nombre: "battlefield 2042", precio: 93 , categoria: "4", img: "./img/battlefield.jpg" },
-    { nombre: "god of war", precio: 8 , categoria: "4", img: "./img/godOfWar.jpg" },
+    { nombre: "call of duty", precio: 98 , categoria: "4", img: "./img/callofduty.jpg", id: 10 },
+    { nombre: "counter strike", precio: 25 , categoria: "4", img: "./img/counterstrike.jpg", id: 11  },
+    { nombre: "battlefield 2042", precio: 93 , categoria: "4", img: "./img/battlefield.jpg", id: 12 },
+    { nombre: "god of war", precio: 8 , categoria: "4", img: "./img/godOfWar.jpg", id: 13 },
 
-    { nombre: "league of legends", precio: 8 , categoria: "5", img: "./img/LOL.jpg" },
+    { nombre: "league of legends", precio: 8 , categoria: "5", img: "./img/LOL.jpg" , id: 14 },
 ];
 
 
 function crearTarjeta() {
     for (const producto of videoJuegos) {
         let card = document.createElement("div");
-        card.innerHTML = `  <div class=" card text-center col-lg-3 col-md-5 col-sm-5 m-4">
-                                <img class = "card-img-top p-2 " src=${producto.img} alt="${producto.nombre}">
-                                <div class =" card-body">
-                                    <h3 class = "card-title">  ${producto.nombre}</h3>
-                                    <p class = "card-text"> Precio: ${producto.precio} USD</p>
-                                    <button id="${producto.categoria}" class="p-2 bg-success m-2 text-white borderCarrito">  Agregar al Carrito </button>
+        card.innerHTML = ` <div class = "row"> 
+                                <div class=" card text-center col-lg-3 col-md-5 col-sm-5 m-4">
+                                    <img class = "card-img-top p-2 " src=${producto.img} alt="${producto.nombre}">
+                                    <div class =" card-body">
+                                        <h3 class = "card-title">  ${producto.nombre}</h3>
+                                        <p class = "card-text"> Precio: ${producto.precio} USD</p>
+                                        <button id="${producto.id}" class="p-2 bg-success m-2 text-white borderCarrito">  Agregar al Carrito </button>
+                                    </div>
                                 </div>
-                            </div 
+                            </div>
                             `;
         card.className = ("container")
         
@@ -46,10 +48,11 @@ function crearTarjeta() {
 
 
 
-        let addCarrito = document.getElementById(`${producto.categoria}`);
+        let addCarrito = document.getElementById(`${producto.id}`);
         addCarrito.addEventListener("click", () => {
             carrito.push(producto)
             console.log(addCarrito);
+            alertCarrito();
         });
     };
 };
@@ -91,21 +94,7 @@ function ascendente() {
         }
     })
     cargarPoductos(ordenadosAZ)
-    Swal.fire({
-        title: "ORDENADO: A-Z",
-        padding:"1.rem",
-        background:"#CFF69F",
-        backdrop:false,
-        timer:"3000",
-        timerProgressBar:true,
-        toast: true,
-        position:"bottom-end",
-        showConfirmButton: false,
-        showCloseButton:true,
-        customClass:{
-            popup: 'alert'
-        },
-    });
+    alertZA();
 }
 
     let boton2 = document.getElementById("boton2")
@@ -121,21 +110,7 @@ function descendente() {
         }
     })
     cargarPoductos(ordenadosZA)
-    Swal.fire({
-        title: "ORDENADO: Z-A",
-        padding:"1.rem",
-        background:"#CFF69F",
-        backdrop:false,
-        timer:"3000",
-        timerProgressBar:true,
-        toast: true,
-        position:"bottom-end",
-        showConfirmButton: false,
-        showCloseButton:true,
-        customClass:{
-            popup: 'alert'
-        },
-    });
+    alertZA();
 }
 
 
