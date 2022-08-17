@@ -32,9 +32,6 @@
                             <a class="nav-link" style="font-weight: bold ;" href="./Tienda.html">Tienda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="font-weight: bold ;" href="./carrito.html">Carrito</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" style="font-weight: bold ;" href="./Contactos.html">Contactos</a>
                         </li>
                     </ul>
@@ -46,13 +43,100 @@
             <h2 class="store">STORE</h2>
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </header>
     <!----- Main ------>
     <main>
-        <main></main>
-        <h2 >Video Juegos</h2>
-        <h2 id="lista"></h2>
-        <hr>
+        <div class="container">
+            <h1>carrito</h1>
+            <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+            <tr id="footer">
+                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+            </tr>
+            </tfoot>
+        </table>
+            <div class="row" id="cards"></div>
+        </div>
+        
+
+
+
+    
+        <template id="template-footer">
+            <th scope="row" colspan="2">Total productos</th>
+            <td>10</td>
+            <td>
+                <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                    vaciar todo
+                </button>
+            </td>
+            <td class="font-weight-bold">$ <span>5000</span></td>
+            <td>
+                <button class="btn btn-primary btn-sm " id="comprarCarrito">
+                    Finalizar Compra
+                </button>
+            </td>
+        </template>
+        
+        <template id="template-carrito">
+            <tr>
+                <th scope="row">id</th>
+                <td>Café</td>
+                <td>1</td>
+                <td>
+                    <button class="btn btn-success btn-sm">
+                        +
+                    </button>
+                    <button class="btn btn-danger btn-sm">
+                        -
+                    </button>
+                </td>
+                <td>$ <span>500</span></td>
+            </tr>
+        </template>
+
+        <template id="template-card">
+            <div class="col-12 mb-2 col-md-4 imgCard">
+                    <div class="card">
+                    <img src="" alt="" class="card-img-top ">
+                    <div class="card-body">
+                        <h5>Titulo</h5>
+                        <p>precio</p>
+                        <button class="btn btn-dark" >Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+
+
     </main>
 
     <!----- Footer ------>
@@ -61,31 +145,31 @@
             <nav class="row">
                 <!-- logo -->
                 <a href="#" class="col-4 text-reset text-uppercase-d-flex-aligitems-center ">
-                    <img src="" alt="" class="img-logo mr-2"> Drops Glass
+                    <img src="../img/dropGlassLogo.jpg" alt="" class="img-logo mr-2 logoFooter">
                 </a>
                 <!-- menu -->
                 <ul class="col-5 list-unstyled">
                     <li class="font-wight-bold text-uppercase redesSecciones " style="color: rgb(61,210,227)"> Secciones
                     </li>
-                    <li class="linkFooter"><a href="#" class="text-reset"> Home </a></li>
-                    <li class="linkFooter"><a href="#" class="text-reset"> Tienda </a></li>
-                    <li class="linkFooter"><a href="#" class="text-reset"> Sobre Nosotros </a></li>
+                    <li class="linkFooter"><a href="../index.html" class="text-reset"> Home </a></li>
+                    <li class="linkFooter"><a href="./Tienda.html" class="text-reset"> Tienda </a></li>
+                    <li class="linkFooter"><a href="./contactos.html" class="text-reset"> Contactos </a></li>
                 </ul>
                 <!-- redes -->
                 <ul class="col-3 list-unstyled">
                     <li class="font-wight-bold text-uppercase redesSecciones" style="color: rgb(61,210,227)"> REDES
                     </li>
                     <li class="d-flex justify-content-between mt-3 linkFooter">
-                        <a href="#" class="text-reset">
+                        <a href="https://www.instagram.com" class="text-reset">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-reset">
+                        <a href="https://twitter.com/?lang=es" class="text-reset">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-reset">
+                        <a href="https://web.whatsapp.com" class="text-reset">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="text-reset">
+                        <a href="https://www.facebook.com" class="text-reset">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
                     </li>
@@ -106,8 +190,9 @@
     <script src="https://kit.fontawesome.com/0f296a15f9.js" crossorigin="anonymous"></script>
     <!-- JavaScritp -->
     <script src="./tienda.js"></script>
-    <!----- DOM ------>
-    <script src="./pages/indexDOM.js"></script>
+    <!----- libreria ------>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../pages/sweetAlert.js"></script>
 </body>
 
 </html>

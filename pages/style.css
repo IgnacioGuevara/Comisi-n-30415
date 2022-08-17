@@ -12,10 +12,12 @@
 .levelUpIcono{
     text-shadow: 2px 2px 1px rgb(109, 0, 119);
 }
-.levelUpTituloTitulo{
+.levelUpTitulo{
     margin:0;
     padding: 30px;
     background-color: rgb(247,247,247);
+    margin-bottom: 20px;
+    box-shadow: -1px -1px 6px gray;
 }
 .levelUp{
     color: rgb(61,210,227);
@@ -94,4 +96,27 @@
     font-size: 15px;
     margin-left: 10px;
     margin-top: 20px;
+}
+.sobreNosotros{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    margin: 20px;
+}
+.textSobreNos{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    font-weight: bold;
+}
+.dropGlassLogo{
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 20%;
+}
+.logoFooter{
+    margin: 10px;
+    width: 110px;
+    border-radius: 50%;
 }

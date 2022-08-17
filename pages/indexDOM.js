@@ -1,4 +1,4 @@
-    const seccionProductos = document.getElementById("productos");
+/*     const seccionProductos = document.getElementById("productos");
 
     const carrito = []; 
     const carritoStorage = JSON.parse (localStorage.getItem("carrito")) || [];
@@ -112,6 +112,7 @@ function descendente() {
     cargarPoductos(ordenadosZA)
     alertZA();
 }
+ 
 
 
 
@@ -120,3 +121,5 @@ function descendente() {
 
 
 
+
+  */
